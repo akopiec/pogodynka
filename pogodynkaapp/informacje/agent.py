@@ -124,12 +124,10 @@ class Agent():
 
 def weather(requests, city, day):
 
-    # do zmiennej api_key trzeba przypisać klucz, który można wygenerować  zakładając bezpłatne konto na stronie https://openweathermap.org/api
-    api_key ='fe997cb160ae5130aeb2cda56b4538fd'
+    # do zmiennej środowiskowej OPENWEATHERMAP_API_KEY trzeba przypisać klucz, który można wygenerować  zakładając bezpłatne konto na stronie https://openweathermap.org/api
+    api_key = os.getenv("OPENWEATHERMAP_API_KEY")
 
     if day == 'dzisiaj':
-
-        api_key='fe997cb160ae5130aeb2cda56b4538fd'
 
         api_url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}'
 
