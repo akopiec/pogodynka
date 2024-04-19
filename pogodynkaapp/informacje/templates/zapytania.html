@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="." method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="odpowiedz"></p>
+    <textarea cols="50" rows="5" name="to_jest_odpowiedz">{{ odpowiedz }}</textarea>
+</form>
+</body>
+</html>
